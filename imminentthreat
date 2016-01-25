@@ -1,0 +1,28 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          imminentthreat
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Example initscript
+# Description:       Start Imminent Threat
+### END INIT INFO
+
+case "$1" in
+  start)
+        echo "Starting Imminent Threat"
+        sudo python /home/imminentthreat/alert.py & #Change this path to wherever you put the python files
+        ;;
+  stop)
+        echo "Stopping Imminent Threat"
+        sudo killall python
+        ;;
+  *)
+        echo "Usage: imminentthreat {start|stop}" >&2
+        exit 3
+        ;;
+esac
+
+exit 0
+

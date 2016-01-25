@@ -18,7 +18,7 @@ axesA.Title.String = 'FFT FTW';
 
 ardi.readasync();       %Set asyncronous read 
 
-fid = fopen('D:\Users\Kyle\HackAZFFT128_508', 'a');%open output file
+fid = fopen('D:\Users\Kyle\ImminentThreatLiveDemo1.txt', 'a');%open output file
 H.CurrentAxes = axesA;
 hold off;
 firstTime = 1;
